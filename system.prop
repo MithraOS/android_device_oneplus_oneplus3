@@ -56,8 +56,7 @@ persist.data.iwlan.enable=true
 persist.qfp=false
 
 # GPS
-persist.gps.qc_nlp_in_use=1
-persist.loc.nlp_name=com.qualcomm.location
+persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
 
 # Graphics
