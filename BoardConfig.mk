@@ -39,7 +39,7 @@ TARGET_USE_SDCLANG := true
 
 # Custom ROM Toolchains
 #TARGET_ROM_CUSTOM_TOOLCHAIN_ARM := arm-linux-androideabi-uber-5.x
-#TARGET_ROM_CUSTOM_TOOLCHAIN_AARCH64 := aarch64-linux-android-uber-5.x
+TARGET_ROM_CUSTOM_TOOLCHAIN_AARCH64 := aarch64-linux-android-Despair-6.x
 
 # Custom Kernel Toolchains
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := aarch64-linux-android-linaro-6.x-kernel
