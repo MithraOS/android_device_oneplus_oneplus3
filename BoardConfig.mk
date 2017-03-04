@@ -37,12 +37,18 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus3,oneplus3,OnePlus3T,oneplus3t
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
+ifneq ($(HOST_OS),darwin)
+    SDCLANG := true
+    SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+    SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+endif
+
 # Custom ROM Toolchains
 #TARGET_ROM_CUSTOM_TOOLCHAIN_ARM := arm-linux-androideabi-uber-5.x
-TARGET_ROM_CUSTOM_TOOLCHAIN_AARCH64 := aarch64-linux-android-vertex-4.9
+TARGET_ROM_CUSTOM_TOOLCHAIN_AARCH64 := aarch64-linux-android-Despair-6.x
 
 # Custom Kernel Toolchains
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := aarch64-linux-android-4.9-kernel
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := aarch64-linux-android-linaro-6.x-kernel
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/$(TARGET_KERNEL_CUSTOM_TOOLCHAIN)/bin
 
 # Bootloader
