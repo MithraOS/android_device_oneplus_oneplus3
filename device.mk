@@ -158,6 +158,12 @@ PRODUCT_PACKAGES += \
     Snap \
     libcamera_shim
 
+# Replacement Apps
+PRODUCT_PACKAGES += \
+    AdAway \
+    AKT \
+    messenger
+
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
