@@ -159,6 +159,7 @@ PRODUCT_PACKAGES += \
     libcamera_shim
 
 # Replacement Apps
+PRODUCT_PACKAGES += \
     AdAway \
     AKT \
     messenger
