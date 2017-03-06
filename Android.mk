@@ -28,8 +28,57 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),oneplus3)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
+# Adaway
 include $(CLEAR_VARS)
+LOCAL_MODULE := AdAway
+LOCAL_SRC_FILES := apps/$(LOCAL_MODULE).apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
 
+# AKT - Test Only
+include $(CLEAR_VARS)
+LOCAL_MODULE := AKT
+LOCAL_SRC_FILES := apps/$(LOCAL_MODULE).apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+# Google Messenger
+include $(CLEAR_VARS)
+LOCAL_MODULE := messenger
+LOCAL_SRC_FILES := apps/$(LOCAL_MODULE).apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+# OnePlus Camera v5
+include $(CLEAR_VARS)
+LOCAL_MODULE := OnePlusCamera
+LOCAL_SRC_FILES := apps/$(LOCAL_MODULE).apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+# OnePlus Gallery v5
+include $(CLEAR_VARS)
+LOCAL_MODULE := OnePlusGallery
+LOCAL_SRC_FILES := apps/$(LOCAL_MODULE).apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR_APPS)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

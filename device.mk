@@ -154,8 +154,14 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
 	OnePlusCamera \
+    OnePlusGallery \
     Snap \
     libcamera_shim
+
+# Replacement Apps
+    AdAway \
+    AKT \
+    messenger
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
